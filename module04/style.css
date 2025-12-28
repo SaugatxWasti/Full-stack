@@ -1,0 +1,99 @@
+ p strong i {
+            color: blueviolet;
+            font-size: 60px;
+        }
+            body {
+            background-color: rgb(211, 209, 209);
+        }
+
+        /* div {
+            background-color: bisque;
+
+            background-image: url(house.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+            height: 500px;
+        } */
+
+        h1#the-title {
+            text-align: center;
+        }
+
+
+/* 
+        .doparagraph {
+            text-transform: uppercase;
+        } */
+
+
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+        a:visited {
+            color: green
+        }
+
+        /* 
+        h1.border {
+            border-width: 50px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 10px;
+        }
+
+        div.half-width {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            display: inline-block;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed blue;
+            padding: 10px;
+            display: inline-block;
+            margin: auto; */
+        /* background-image: url("house.jpg");
+            background-position: center center;
+            background-size: cover;
+            border-radius: 0 50% 0 50%;
+            box-shadow: 10px 10px 15px green; */
+        /* } */
+
+        body {
+            background-color: rgb(198, 195, 195);
+            /* background-image: url("house.jpg"); */
+        }
+
+        #box {
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: black;
+            color: red;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.5;
+
+        }
+        .floating-img{
+            float: right;
+            margin: 10px;
+            border: 1px solid black;
+            box-shadow: 0 0 5px black;
+        }
