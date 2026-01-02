@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Relative Positioning</title>
+
+    <style>
+        .box {
+            width: 400px;
+            height: 500px;
+            /* border: 20px solid red; */
+
+            color: rgb(75, 189, 189);
+            padding: 50px;
+            font-size: 60px;
+            text-align: center;
+            position: relative;
+            top: 30px;
+            left: 60px;
+
+        }
+
+        .secondbox {
+            position: absolute;
+
+            color: blue;
+
+            top: 0;
+            right: 0;
+            height: 50%;
+            width: 50%;
+            background-color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"> this is a box
+        <div class="secondbox">top right</div>
+    </div>
+
+</body>
+
+</html>
