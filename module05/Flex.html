@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Flex</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #container div {
+            /* border: 1px solid red; */
+            /* flex-basis: 50%;
+            flex-shrink: 0;
+            flex-grow: 0; */
+        }
+
+        .navigation {
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+
+        .content {
+            flex-basis: 80%;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        .header {
+            flex-basis: 100%;
+            flex-grow: 1;
+            flex-shrink: 0;
+            background-color: aliceblue;
+            color: #555;
+            padding: 20px;
+            border-bottom: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="header"> Header</div>
+        <div class="navigation">Navigation</div>
+        <div class="content">Content
+            <h1>This is a great content</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium veritatis sequi non veniam,
+                exercitationem odit hic? Accusantium architecto, officia temporibus perspiciatis consequatur voluptatem
+                quia alias cumque corrupti reprehenderit tenetur laborum!
+            </p>
+            <h2>Whatelse</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad minus veritatis tempore tenetur quod,
+                accusantium fuga corporis illum, temporibus aperiam pariatur vel velit impedit, iure suscipit! Cum quam
+                aperiam deserunt?
+            </p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
