@@ -33,17 +33,47 @@
 
 // function addNumber (num1, num2){
 //     const total = num1+num2;
+// //     return total;
+// // }
+// // const addedTotal = addNumber(1,9);
+
+
+// function addNumbers(...numbers){
+//     let total =0;
+//     for(index in numbers){
+//         total = total + numbers[index];
+//     }
 //     return total;
-// }
-// const addedTotal = addNumber(1,9);
+// } 
+
+// addNumbers(1,4,2,3,7)
 
 
-function addNumbers(...numbers){
-    let total =0;
-    for(index in numbers){
-        total = total + numbers[index];
-    }
-    return total;
-} 
+// Step 1: Fill in these three consts by selecting the right nodes by their HTML ID's
+const name = document.getElementById("name"); // Fill this in 
+const age = document.getElementById("age"); // Fill this in.
+const dogYears = document.getElementById("dogyears"); // Fill this in. 
 
-addNumbers(1,4,2,3,7)
+// Step 2. Set the values.
+// Example: myNode.innerText = "something"
+// Set `name` and `age` in here
+name.innerText = "Saugat";
+age.innerText = "23";
+dogYears.innerText = "7";
+
+
+function showDogYears(age) {
+//   // Step 3. Cast `age` as a number
+//   dogYears.innerText = age * 7;
+  const numAge = Number(age)
+  return age * 7
+}
+
+// // Step 4. Set the parameter of showDogyears()
+dogYears.innerText = showDogYears(age.innerText);
+
+// // Step 5. Select all the .fake-input classes and give them the class of .real-input. This may take a little "googling" to find the solution, but that's half of what web development is all about. 
+const fakeInputs = document.querySelectorAll(".fake-input")
+fakeInputs.forEach(node => {
+  node.classList.add("real-input");
+})// 
