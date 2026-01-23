@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Star Wars Character</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #character {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: #217c17;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #d13c86;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Random Star Wars Character</h1>
+    <hr>
+    <div>
+        <button id="newCharacter">Get Random Character</button>
+    </div>
+    <div id="character">
+        <h2 id="name">Name: </h2>
+        <p id="height">Height: </p>
+        <p id="mass">Mass: </p>
+        <p id="hair">Hair Color: </p>
+        <p id="skin">Skin Color: </p>
+        <p id="birth">Birth Year: </p>
+        <p id="gender">Gender: </p>
+    </div>
+
+
+    <script>
+        const characterDiv = document.querySelector('#character');
+        const nameEl = document.querySelector('#name');
+        const heightEl = document.querySelector('#height');
+        const massEl = document.querySelector('#mass');
+        const hairEl = document.querySelector('#hair');
+        const skinEl = document.querySelector('#skin');
+        const birthEl = document.querySelector('#birth');
+        const genderEl = document.querySelector('#gender');
+        const button = document.querySelector('#newCharacter');
+
+        async function getRandomCharacter() {
+
+            const randomId = Math.floor(Math.random() * 50) + 1;
+            const url = `https://swapi.dev/api/people/${randomId}/`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Character not found, trying again...');
+                }
+                const data = await response.json();
+
+                // Update the DOM
+                nameEl.textContent = `Name: ${data.name}`;
+                heightEl.textContent = `Height: ${data.height}`;
+                massEl.textContent = `Mass: ${data.mass}`;
+                hairEl.textContent = `Hair Color: ${data.hair_color}`;
+                skinEl.textContent = `Skin Color: ${data.skin_color}`;
+                birthEl.textContent = `Birth Year: ${data.birth_year}`;
+                genderEl.textContent = `Gender: ${data.gender}`;
+            } catch (error) {
+                console.error(error);
+
+                getRandomCharacter();
+            }
+        }
+
+        button.addEventListener('click', getRandomCharacter);
+
+        getRandomCharacter();
+    </script>
+</body>
+
+</html>

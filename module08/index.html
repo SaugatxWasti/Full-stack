@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // window.onbeforeunload = function () {
+        //     // alert("You are leaving the page");
+        //     console.log("Before u unload");
+        //     return "Are you sure you want to leave the page";
+        // }
+
+
+        // let person1 = 'Saugat Wasti';
+
+        // function greeting() {
+        //     console.log(`hello ${person1}`)
+        // }
+        // greeting();
+
+        // console.log("Waiting for 2.5sec")
+        // setTimeout(function () {
+        //     console.log("Do the thing in here")
+        // }, 2500)
+
+
+        // let count = 0;
+        // let myInterval = setInterval(function () {
+        //     console.log("Something is here...")
+        //     count++;
+
+        //     if (count === 3) {
+        //         //Unset the interval
+        //         clearInterval(myInterval);
+        //         console.log("Thats the last one");
+        //     }
+
+        // }, 2000)
+
+        // while (true) {
+        //     let number = prompt("Guess the number");
+        //     number = Number(number);
+
+
+        //     const randomNumber = Math.ceil(Math.random() * 10);
+
+        //     if (number === randomNumber) {
+        //         alert("You Win");
+        //         break;
+        //     }
+        //     else {
+        //         console.log("You guessed", number, "But the right number was ", randomNumber);
+        //     }
+        // }
+
+        // const person5 = {
+        //     "name": "saugat",
+        //     speak() {
+        //         console.log("Meow");
+        //     }
+
+        // }
+        // person5.speak();
+
+
+        fetch('https://swapi.dev/api/people/1/')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
